@@ -25,7 +25,9 @@ footer {
     box-sizing: border-box;
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 
 body {
@@ -206,7 +208,6 @@ header h1 {
     align-items: center;
     justify-content: space-between;
     background-color: #f1f5f9;
-
     padding: 10px 40px;
     color: #1e293b;
     gap: 10px;
@@ -219,7 +220,7 @@ header h1 {
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
-    height: 21px;
+    height: 15px;
     background: none;
     border: none;
     cursor: pointer;
@@ -231,7 +232,6 @@ header h1 {
     height: 3px;
     width: 100%;
     background-color: #1e293b;
-    /* These are the visible lines! */
     border-radius: 3px;
     transition: all 0.3s ease;
 }
@@ -271,6 +271,157 @@ header h1 {
     margin-bottom: 20px;
     text-align: center;
 }
+
+.about-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+    width: 100%;
+}
+
+.about-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.15);
+}
+
+about-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    border-radius: 12px;
+    color: white;
+}
+
+.about-content {
+    width: 100%;
+}
+
+.about-content h3 {
+    color: #1e293b;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+
+.about-content p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-content li {
+    color: #64748b;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+    position: relative;
+    padding-left: 20px;
+}
+
+.about-content li:before {
+    content: "▸";
+    color: #3b82f6;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.achievements {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.achievement {
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tech-tag {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+}
+
+/* Skills Grid - Mobile First */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Single column on mobile */
+    gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.skill-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.skill-card h3 {
+    color: #1e293b;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.skill-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
 
 .cards-container {
     display: flex;
@@ -364,11 +515,49 @@ header h1 {
     .card {
         width: 250px;
     }
+
+    .about-card {
+        flex-direction: row;
+        /* Horizontal layout on tablet+ */
+        text-align: left;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 20px;
+    }
+
+    .about-icon {
+        align-self: flex-start;
+    }
+
+    .achievements,
+    .tech-tags {
+        justify-content: flex-start;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on tablet */
+        gap: 24px;
+    }
 }
 
 @media (min-width: 1024px) {
     header {
         padding: 10px 10%;
+    }
+
+    .about-card {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Keep 2 columns on desktop */
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 
@@ -389,6 +578,12 @@ header h1 {
 
     .section {
         padding: 50px 15%;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns on large screens */
+        max-width: 1200px;
     }
 
 }
