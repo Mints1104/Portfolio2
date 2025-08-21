@@ -38,17 +38,14 @@ body {
 }
 
 #hero {
-
     width: 100%;
     height: 50vh;
-    background: linear-gradient(135deg, #1e40af, #3b82f6, #60a5fa);
+    background: linear-gradient(135deg, #e0f2fe, #bae6fd, #7dd3fc, #38bdf8);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
-
 
 #hero h1 {
     font-size: 2rem;
@@ -67,9 +64,9 @@ body {
 }
 
 #hero button {
-    background-color: #ffffff;
-    color: #2563eb;
-    border: none;
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #ffffff;
+    border: 1px solid #0ea5e9;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1rem;
@@ -79,14 +76,20 @@ body {
     display: inline-block;
     margin-top: 20px;
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+    transition: all 0.3s ease;
+}
+
+#hero button:hover {
+    background: linear-gradient(135deg, #0369a1, #075985);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.3);
 }
 
 #hero p {
     color: rgba(255, 255, 255, 0.9);
     text-align: center;
-
 }
-
 
 nav {
     width: 100%;
@@ -109,7 +112,8 @@ nav a {
 }
 
 nav a:hover {
-    color: #93c5fd;
+    color: #0284c7;
+    text-shadow: 0 0 1px rgba(2, 132, 199, 0.3);
 }
 
 nav ul {
@@ -126,13 +130,13 @@ nav ul {
     right: 0;
     width: 300px;
     height: 100vh;
-    background-color: #fff;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    backdrop-filter: blur(10px);
+    box-shadow: -2px 0 10px rgba(14, 165, 233, 0.2);
+    z-index: 9999;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
-
-
+    border-left: 1px solid rgba(186, 230, 253, 0.3);
 }
 
 .mobile-nav.active {
@@ -145,9 +149,9 @@ nav ul {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 9998;
 }
 
 .mobile-nav-overlay.active {
@@ -158,46 +162,55 @@ nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
     list-style: none;
-    padding: 0;
+    padding: 80px 0 0 0;
     margin: 0;
+    height: 100vh;
 }
 
 .mobile-nav a {
     text-decoration: none;
-    color: black;
+    color: #0c4a6e;
     font-size: 1.2rem;
     font-weight: bold;
-    text-decoration: none;
-    padding: 10px 20px;
+    padding: 15px 30px;
     display: block;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.mobile-nav a:hover {
+    background: rgba(14, 165, 233, 0.1);
+    color: #0284c7;
+    transform: translateX(5px);
 }
 
 header {
     position: fixed;
-
     width: 100%;
     justify-content: space-between;
     align-items: center;
     display: flex;
     flex-direction: row;
-    background-color: #fff;
-    color: #fff;
+    background-color: rgba(248, 250, 252, 0.95);
+    backdrop-filter: blur(10px);
+    color: #1e293b;
     padding: 10px 5%;
     min-height: 50px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+    box-shadow: 0 2px 4px rgba(14, 165, 233, 0.1);
+    border-bottom: 1px solid rgba(186, 230, 253, 0.3);
+    z-index: 9997;
 }
 
 #cv-button {
     display: none;
-    background: linear-gradient(135deg, #3b82f6, #60a5fa);
-    color: #1e293b;
-    border: none;
+    background: linear-gradient(135deg, #0284c7, #0ea5e9);
+    color: #ffffff;
+    border: 1px solid #0ea5e9;
     padding: 10px 20px;
     border-radius: 8px;
     font-size: 1rem;
@@ -206,13 +219,16 @@ header {
     height: 40px;
     text-decoration: none;
     text-wrap: nowrap;
+    box-shadow: 0 2px 6px rgba(2, 132, 199, 0.2);
+    transition: all 0.3s ease;
 }
 
 #cv-button:hover {
-    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    background: linear-gradient(135deg, #0369a1, #0284c7);
     color: #ffffff;
-    transform: scale(1.03);
-    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+    border-color: #0284c7;
 }
 
 
@@ -231,12 +247,11 @@ header h1 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #f1f5f9;
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
     padding: 10px 40px;
-    color: #1e293b;
+    color: #0c4a6e;
     gap: 10px;
-
-
+    border-top: 1px solid rgba(186, 230, 253, 0.3);
 }
 
 .burger-menu {
@@ -269,7 +284,7 @@ header h1 {
 .section {
     width: 100%;
     height: 100%;
-    background-color: #f8fafc;
+    background: linear-gradient(135deg, #f8fafc, #f0f9ff);
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
@@ -297,12 +312,12 @@ header h1 {
 }
 
 .about-card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(14, 165, 233, 0.08);
+    border: 1px solid #e0f2fe;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -311,11 +326,14 @@ header h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 100%;
     width: 100%;
+    z-index: 0;
+
 }
 
 .about-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.15);
+    box-shadow: 0 8px 16px rgba(14, 165, 233, 0.12);
+    border-color: #bae6fd;
 }
 
 about-icon {
@@ -364,7 +382,7 @@ about-icon {
 
 .about-content li:before {
     content: "▸";
-    color: #3b82f6;
+    color: #0284c7;
     position: absolute;
     left: 0;
     font-weight: bold;
@@ -379,12 +397,14 @@ about-icon {
 }
 
 .achievement {
-    background: #dbeafe;
-    color: #1e40af;
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    color: #0c4a6e;
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 0.875rem;
     font-weight: 500;
+    border: 1px solid #bae6fd;
+    box-shadow: 0 1px 3px rgba(14, 165, 233, 0.1);
 }
 
 .tech-tags {
@@ -395,13 +415,14 @@ about-icon {
 }
 
 .tech-tag {
-    background: #f1f5f9;
-    color: #475569;
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    color: #0c4a6e;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.875rem;
     font-weight: 500;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #bae6fd;
+    box-shadow: 0 1px 3px rgba(14, 165, 233, 0.1);
 }
 
 /* Skills Grid - Mobile First */
@@ -415,13 +436,16 @@ about-icon {
 }
 
 .skill-card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(14, 165, 233, 0.08);
+    border: 1px solid #e0f2fe;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .skill-card:hover {
@@ -456,24 +480,27 @@ about-icon {
 }
 
 .card {
-    background-color: #ffffff;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     padding: 20px;
     width: 100%;
     max-width: 300px;
-    box-shadow: 0 4px 8px 0 rgba(37, 99, 235, 0.1);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 8px rgba(14, 165, 233, 0.08);
+    border: 1px solid #e0f2fe;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-
+    position: relative;
+    z-index: 1;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px 0 rgba(37, 99, 235, 0.2);
+    box-shadow: 0 8px 16px rgba(14, 165, 233, 0.12);
+    border-color: #bae6fd;
 }
 
 .card h4 {
@@ -487,7 +514,7 @@ about-icon {
 }
 
 .card button {
-    background-color: #3b82f6;
+    background: linear-gradient(135deg, #0284c7, #0ea5e9);
     color: #ffffff;
     border: none;
     cursor: pointer;
@@ -495,10 +522,14 @@ about-icon {
 
     font-weight: bold;
     border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(2, 132, 199, 0.2);
+    transition: all 0.3s ease;
 }
 
 .card button:hover {
-    background-color: #2563eb;
+    background: linear-gradient(135deg, #0369a1, #0284c7);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
 }
 
 .container {
