@@ -193,6 +193,30 @@ header {
 
 }
 
+#cv-button {
+    display: none;
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    color: #1e293b;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+#cv-button:hover {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: #ffffff;
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+}
+
+
+
 
 
 header h1 {
@@ -487,6 +511,10 @@ about-icon {
         min-height: 60px;
     }
 
+    #cv-button {
+        display: block;
+    }
+
     nav ul {
         display: flex;
     }
@@ -552,6 +580,10 @@ about-icon {
         margin-right: auto;
     }
 
+    #cv-button {
+        display: block;
+    }
+
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
         /* Keep 2 columns on desktop */
@@ -575,6 +607,9 @@ about-icon {
         padding: 10px 15%;
     }
 
+    #cv-button {
+        display: block;
+    }
 
     .section {
         padding: 50px 15%;

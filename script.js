@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const burgerMenu = document.getElementById('burgerMenu');
     const mobileNav = document.getElementById('mobileNav');
     const overlay = document.getElementById('mobileNavOverlay');
+    const contactButton = document.getElementById('contact-button');
 
     burgerMenu.addEventListener('click', () => {
         mobileNav.classList.toggle('active');
@@ -21,6 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
    });
    
+   contactButton.addEventListener('click', () => {
+    window.location.href = 'mailto:harunemretontus@hotmail.com';
+   });
 
+   
 
 });
