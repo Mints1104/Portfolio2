@@ -1,136 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harun Tontus Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-
-<body>
+  <body>
     <header>
-        <h1>Harun Tontus</h1>
-    
-        <nav>
-            <ul>
-                <li><a href="#hero">Hero</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <h1>Harun Tontus</h1>
 
-        <a id="cv-button" href="assets/HarunTontusCVUpdated.pdf" download>
-            Download CV
-        </a>
+      <nav>
+        <ul>
+          <li><a href="#hero">Hero</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
+      <a id="cv-button" href="assets/HarunTontusCVUpdated.pdf" download>
+        Download CV
+      </a>
 
-        <button class="burger-menu" id="burgerMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+      <button class="burger-menu" id="burgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-        <div class="mobile-nav" id="mobileNav">
-            <ul>
-                <li><a href="#hero">Hero</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-
-       
+      <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+      <div class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="#hero">Hero</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </header>
 
     <section id="hero" class="hero">
-        <h1>Hi, I'm Harun</h1>
-        <h2>Aspiring Software Engineer specialising in Web and Android Development</h2>
-        <button id="contact-button">Contact me</button>
+      <h1>Hi, I'm Harun</h1>
+      <h2>
+        Aspiring Software Engineer specialising in Web and Android Development
+      </h2>
+      <button id="contact-button">Contact me</button>
     </section>
 
     <section id="about" class="section">
-        <h2>About Me:</h2>
-        <div class="about-card">
-            <div class="about-content">
-                <h3>Education</h3>
-                <p>First Class Honours in Computer Science from Swansea University</p>
-                <h3>Notable Achievements:</h3>
-                <div class="achievements">
-                    <span class="achievement">Data Science: 94%</span>
-                    <span class="achievement">Machine Learning: 99%</span>
-                </div>
-            </div>
+      <h2>About Me:</h2>
+      <div class="about-card">
+        <div class="about-content">
+          <h3>Education</h3>
+          <p>First Class Honours in Computer Science from Swansea University</p>
+          <h3>Notable Achievements:</h3>
+          <div class="achievements">
+            <span class="achievement">Data Classification Assignment: 94%</span>
+            <span class="achievement"
+              >CIFAR-100 Image Recognition Assignment: 99%</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <div class="about-content">
+          <h3>Specialisations</h3>
+          <ul>
+            <li>Web Development</li>
+            <li>Android Development</li>
+            <li>Machine Learning & Artificial Intelligence</li>
+            <li>Data Science</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <div class="about-content">
+          <h3>Technologies</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">Kotlin</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">ML Frameworks</span>
+            <span class="tech-tag">RESTful APIs</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">Retrofit</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Tensorflow</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">Numpy</span>
+            <span class="tech-tag">Scikit-learn</span>
+            <span class="tech-tag">Unity</span>
+            <span class="tech-tag">C#</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects:</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <h3>Pomodoro Website</h3>
+          <img
+            class="project-image"
+            src="assets/PomodoroWebsite.png"
+            alt="Pomodoro Website"
+          />
+          <p>
+            A simple pomodoro timer website that allows you to set a timer for
+            your work sessions and breaks. Built with React.
+          </p>
+          <div class="project-links">
+            <a href="https://mints1104.github.io/PomodoroReact/" target="_blank"
+              >View Project</a
+            >
+            <a href="https://github.com/Mints1104/PomodoroReact" target="_blank"
+              >View Source Code</a
+            >
+          </div>
         </div>
 
-        <div class="about-card">
-            <div class="about-content">
-                <h3>Specialisations</h3>
-                <ul>
-                    <li>Web Development</li>
-                    <li>Android Development</li>
-                    <li>Machine Learning & Artificial Intelligence</li>
-                    <li>Data Science</li>
-                   
-                </ul>
-            </div>
+        <div class="project-card">
+          <h3>QuizApp</h3>
+          <img
+            class="project-image"
+            src="assets/quizapp_game.png"
+            alt="QuizApp"
+          />
+          <p>
+            Engineered a full-stack Android quiz application with Firebase
+            integration, featuring secure authentication, real-time
+            leaderboards, and categorized quizzes.
+          </p>
+          <div class="project-links">
+            <a
+              href="https://github.com/Mints1104/MyQuizApplication"
+              target="_blank"
+              >View Source Code</a
+            >
+          </div>
         </div>
 
-        <div class="about-card">
-            <div class="about-content">
-                <h3>Technologies</h3>
-                <div class="tech-tags">
-                    <span class="tech-tag">Kotlin</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">ML Frameworks</span>
-                    <span class="tech-tag">RESTful APIs</span>
-                    <span class="tech-tag">SQL</span>
-                    <span class="tech-tag">Java</span>
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">Express</span>
-                    <span class="tech-tag">MongoDB</span>
-                    <span class="tech-tag">Git</span>
-                    <span class="tech-tag">Spring Boot</span>
-                    <span class="tech-tag">Retrofit</span>
-                    <span class="tech-tag">Firebase</span>
-                    <span class="tech-tag">Tensorflow</span>
-                    <span class="tech-tag">Pandas</span>
-                    <span class="tech-tag">Numpy</span>
-                    <span class="tech-tag">Scikit-learn</span>
-                    <span class="tech-tag">Unity</span>
-                    <span class="tech-tag">C#</span>
-
-
-
-
-
-                </div>
-            </div>
+        <div class="project-card">
+          <h3>Media Review Platform</h3>
+          <img
+            class="project-image"
+            src="assets/media_review_platform.png"
+            alt="Media Review Platform"
+          />
+          <p>
+            The Media Review Platform is a full-stack web application designed
+            to allow users to discover, review, and discuss various forms of
+            media, including Games, TV Shows, Films & more. It features secure
+            user authentication and comprehensive CRUD (Create, Read, Update,
+            Delete) functionalities for reviews, enhanced by search and
+            filtering capabilities.
+          </p>
+          <div class="project-links">
+            <a
+              href="https://github.com/Mints1104/MediaReviewPlatform"
+              target="_blank"
+              >View Source Code</a
+            >
+            <a href="https://media-review-platform.vercel.app/" target="_blank"
+              >View Project</a
+            >
+          </div>
         </div>
-       
+
+        <div class="project-card">
+          <h3>Gamma</h3>
+          <img class="project-image" src="assets/gamma3.0.png" alt="Gamma" />
+          <p>
+            The app aggregates and organises real-time map data into a
+            user-friendly and customisable interface allowing users to improve
+            their experience.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/Mints1104/Gamma-2.0" target="_blank"
+              >View Source Code</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Remindication</h3>
+          <img
+            class="project-image"
+            src="assets/Remindication_home.png"
+            alt="Remindication"
+          />
+          <p>
+            Developed a comprehensive medication management Android application
+            addressing healthcare adherence challenges.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/Mints1104/Remindication" target="_blank"
+              >View Source Code</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Forest Fire Prediction</h3>
+          <img
+            class="project-image"
+            src="assets/forest_fire_prediction.png"
+            alt="Forest Fire Prediction"
+          />
+          <p>
+            Developed a machine learning model to predict forest fires using the
+            Random Forest Classifier. The model achieved an accuracy of 95% on
+            the test set.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>House Price Prediction</h3>
+          <img
+            class="project-image"
+            src="assets/house_price_prediction.png"
+            alt="House Price Prediction"
+          />
+          <p>
+            This project is an end-to-end machine learning solution for
+            predicting house prices using the House Prices - Advanced Regression
+            Techniques dataset from Kaggle. It demonstrates a complete data
+            science pipeline, from initial data understanding and preprocessing
+            to model building, evaluation, and prediction.
+          </p>
+          <div class="project-links">
+            <a
+              href="https://github.com/Mints1104/house-price-predictor"
+              target="_blank"
+              >View Source Code</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Image Recognition System</h3>
+          <img
+            class="project-image"
+            src="assets/cifar100_image.png"
+            alt="Image Recognition System"
+          />
+          <p>
+            Developed a sophisticated image classification system using CNN and
+            SVM on the CIFAR-100 dataset, achieving 99% accuracy.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Super Box Game</h3>
+          <img
+            class="project-image"
+            src="assets/UnityGame.png"
+            alt="Super Box Game"
+          />
+          <p>
+            Engineered a dynamic 2D arcade game using Unity and C#, implementing
+            core game mechanics, multiple levels, and responsive controls.
+            Features include multiple challenging levels, score tracking, and
+            smooth gameplay mechanics.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="section">
-        <h2>Contact Me:</h2>
-        <p>Email: <a href="mailto:harunemretontus@hotmail.com">harunemretontus@hotmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/harun-tontus-3538161b6/">Harun Tontus</a></p>
-        <p>GitHub: <a href="https://github.com/Mints1104">Harun Tontus</a></p>
+      <h2>Contact Me:</h2>
+      <p>
+        Email:
+        <a href="mailto:harunemretontus@hotmail.com"
+          >harunemretontus@hotmail.com</a
+        >
+      </p>
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/harun-tontus-3538161b6/"
+          >Harun Tontus</a
+        >
+      </p>
+      <p>GitHub: <a href="https://github.com/Mints1104">Harun Tontus</a></p>
     </section>
 
     <footer class="footer">
-        <p>© 2025 Harun Tontus</p>
-        
+      <p>© 2025 Harun Tontus</p>
     </footer>
 
-<script src="script.js"></script>
-</body>
-
-
-
-
-
+    <script src="script.js"></script>
+  </body>
 </html>
