@@ -500,6 +500,7 @@ about-icon {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    margin-top: auto;
 }
 
 .project-card {
@@ -517,18 +518,22 @@ about-icon {
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     z-index: 1;
+    min-height: 500px;
+    justify-content: space-between;
 }
 
 .project-card p {
-    padding-top: 30px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 .project-image {
     width: 100%;
-    height: 100%;
+    height: 250px;
+    max-width: 400px;
     object-fit: cover;
     border-radius: 10px;
-
 }
 
 .card {
@@ -637,6 +642,18 @@ about-icon {
         width: 250px;
     }
 
+    .projects-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .project-card {
+        max-width: 350px;
+        flex: 1 1 350px;
+    }
+
     .about-card {
         flex-direction: row;
         /* Horizontal layout on tablet+ */
@@ -679,7 +696,17 @@ about-icon {
         height: 40px;
     }
 
+    .projects-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 30px;
+    }
 
+    .project-card {
+        max-width: 380px;
+        flex: 1 1 380px;
+    }
 
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -688,7 +715,6 @@ about-icon {
         margin-left: auto;
         margin-right: auto;
     }
-
 
     .section {
         padding: 40px 10%;
