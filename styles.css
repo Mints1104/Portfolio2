@@ -500,7 +500,31 @@ about-icon {
     align-items: center;
     justify-content: center;
     gap: 15px;
+}
+
+.project-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    gap: 15px;
     margin-top: auto;
+    border-radius: 10px;
+    border: 1px solid #1e293b; 
+    background-color: #e0f2fe;
+}
+
+.project-link:hover {
+    box-shadow: 0 8px 16px rgba(14, 165, 233, 0.12);
+    border-color: #bae6fd;
+    transition: all 0.3s ease;
+    transform: scale(1.02);
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #1e293b;
 }
 
 .project-card {
@@ -520,6 +544,13 @@ about-icon {
     z-index: 1;
     min-height: 500px;
     justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(14, 165, 233, 0.12);
+    border-color: #bae6fd;
+    transition: all 0.3s ease;
 }
 
 .project-card p {
